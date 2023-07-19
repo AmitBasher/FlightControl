@@ -1,0 +1,79 @@
+<div class="airport">
+    <div class="before-main airport-part">
+        <div class="label">
+            <span>1</span>
+            <span>Landing A</span>
+            <ng-container *ngFor="let f of Stages[0]">
+              <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{straightImg}}"></flight>
+            </ng-container>
+        </div>
+        <div class="label">
+            <span>2</span>
+            <span>Landing B</span>
+            <ng-container *ngFor="let f of Stages[1]">
+              <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{straightImg}}"></flight>
+            </ng-container>
+        </div>
+        <div class="label">
+            <span>3</span>
+            <span>Landing C</span>
+            <ng-container *ngFor="let f of Stages[2]">
+              <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{landingImg}}"></flight>
+            </ng-container>
+        </div>
+    </div>
+    <div class="airport-part road">
+        <div class="label">
+            <span>4</span>
+            <span>Runaway</span>
+        </div>
+        <div class='main-road'>
+            <div class="space">
+              <ng-container *ngFor="let f of Stages[3]">
+                <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{straightImg}}"></flight>
+              </ng-container>
+            </div>
+            <div class='side-road'>
+                <div class="label">
+                    <span>5</span>
+                    <span>Pre Terminal</span>
+                    <ng-container *ngFor="let f of Stages[4]">
+                      <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{straightImg}}"></flight>
+                    </ng-container>
+                </div>
+                <div class="terminal-container">
+                    <div class="label">
+                        <span>6</span>
+                        <span>Terminal A</span>
+                        <ng-container *ngFor="let f of Stages[5]">
+                          <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{straightImg}}"></flight>
+                        </ng-container>
+                    </div>
+                    <div class="label">
+                        <span>7</span>
+                        <span>Terminal B</span>
+                        <ng-container *ngFor="let f of Stages[6]">
+                          <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{straightImg}}"></flight>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="label">
+                    <span>8</span>
+                    <span>Pre Dispatching</span>
+                    <ng-container *ngFor="let f of Stages[7]">
+                      <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{straightImg}}"></flight>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="after-main airport-part">
+        <div class="label">
+            <span>9</span>
+            <span>Dispatching</span>
+            <ng-container *ngFor="let f of Stages[8]">
+              <flight Airline="{{f.Airline}}" Flight="{{f.FlightCode}}"  path="{{takeOffImg}}"></flight>
+            </ng-container>
+        </div>
+    </div>
+</div>

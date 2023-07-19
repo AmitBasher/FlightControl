@@ -1,0 +1,24 @@
+<!-- <p>log-table works!</p>
+<button (click)="func()">asf</button> -->
+<div ngClass="MainLog">
+  <div ngClass="Stage">
+    <span>Waiting</span>
+  <ng-container *ngFor="let fl of Waiting">
+      <p>Flight: {{fl.FlightCode}}</p>
+    </ng-container>
+  </div>
+  <ng-container *ngFor="let s of Stages">
+    <div ngClass="Stage">
+      <span>{{s.Title}}</span>
+      <ng-container *ngFor="let fl of s.Flights">
+        <p>Flight: {{fl.FlightCode}}</p>
+      </ng-container>
+    </div>
+  </ng-container>
+  <div ngClass="Stage">
+    <span>Finished</span>
+    <ng-container *ngFor="let fl of Finished">
+      <p>Flight: {{fl.FlightCode}}</p>
+    </ng-container>
+  </div>
+</div>

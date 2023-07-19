@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightControl.Api", "FlightControl.api\FlightControl.Api.csproj", "{234F56D7-5D55-446C-BF3E-9E9EC02DD51F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightControl.Domain", "FlightControl.Domain\FlightControl.Domain.csproj", "{D9879573-6AAA-4C16-ADC8-8107C881A187}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightControl.Simulator", "FlightControl.Simulator\FlightControl.Simulator.csproj", "{738EB0E0-27E8-41AF-9A9E-7E13D7B8E07D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightControl.Infrastructure", "FlightControl.Infrastructure\FlightControl.Infrastructure.csproj", "{33A8A690-28E4-433F-9D74-7DAD595889EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{234F56D7-5D55-446C-BF3E-9E9EC02DD51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234F56D7-5D55-446C-BF3E-9E9EC02DD51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234F56D7-5D55-446C-BF3E-9E9EC02DD51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234F56D7-5D55-446C-BF3E-9E9EC02DD51F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9879573-6AAA-4C16-ADC8-8107C881A187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9879573-6AAA-4C16-ADC8-8107C881A187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9879573-6AAA-4C16-ADC8-8107C881A187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9879573-6AAA-4C16-ADC8-8107C881A187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{738EB0E0-27E8-41AF-9A9E-7E13D7B8E07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{738EB0E0-27E8-41AF-9A9E-7E13D7B8E07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{738EB0E0-27E8-41AF-9A9E-7E13D7B8E07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{738EB0E0-27E8-41AF-9A9E-7E13D7B8E07D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A8A690-28E4-433F-9D74-7DAD595889EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A8A690-28E4-433F-9D74-7DAD595889EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A8A690-28E4-433F-9D74-7DAD595889EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A8A690-28E4-433F-9D74-7DAD595889EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE0DAD03-8E32-466D-BF27-11FEFEE90888}
+	EndGlobalSection
+EndGlobal

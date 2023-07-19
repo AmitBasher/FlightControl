@@ -1,0 +1,64 @@
+.airport{
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    height: 300px;
+}
+.airport-part{
+    display: flex;
+    /* margin-left: 40px; */
+}
+.road{
+    flex-direction: column;
+    width: 700px;
+    justify-content: start;
+    align-items: center;
+}
+.label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+}
+.airport span{
+    /* margin-left: 80px; */
+    font-size: x-large;
+}
+.main-road{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(rgb(116, 116, 116) 0%,rgb(116, 116, 116)30%, transparent 30%);
+    align-items: center;
+}
+.space{
+    min-height: 50px;
+}
+.side-road{
+    display: flex;
+    position:static;
+    background-color: transparent;
+    border: 50px solid rgb(116, 116, 116);
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    height: 100%;
+    padding-top: 5%;
+    width: 65%;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.terminal-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+/* .terminals{
+    background-color: blue;
+    width: 10%;
+    height: 100%;
+} */

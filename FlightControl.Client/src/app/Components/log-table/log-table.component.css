@@ -1,0 +1,17 @@
+.Stage{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 70px;
+    
+}
+span{
+    height: 40px;
+    text-decoration: underline;
+}
+.MainLog{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+}

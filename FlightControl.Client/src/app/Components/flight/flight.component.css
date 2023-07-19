@@ -1,0 +1,36 @@
+.flight{
+    display:flex;
+}
+.flight >p{
+    font-size: large;
+}
+.Delta-air{
+    color: rgb(58, 89, 90);
+}
+.American-Airlines{
+    color: rgb(73, 65, 107);
+}
+.Lufthansa{
+    color: rgb(60, 102, 74);
+}
+.Southwest{
+    color: rgb(74, 80, 47);
+}
+.Emirates{
+    color: rgb(87, 65, 51);
+}
+.Air-France{
+    color: rgb(82, 47, 67);
+}
+.British-Airways{
+    color: rgb(73, 43, 43);
+}
+.El-Al{
+    color: rgb(34, 48, 80);
+}
+.EasyJet{
+    color: rgb(17, 128, 85);
+}
+.AirAsia{
+    color: rgb(99, 42, 19);
+}
