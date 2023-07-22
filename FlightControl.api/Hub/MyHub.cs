@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.SignalR;
-
-namespace FlightControl.Api {
-    public class MyHub : Hub {
-        
-    }
+﻿namespace FlightControl.Api; 
+public class MyHub : Hub {
+    
 }

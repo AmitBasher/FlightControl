@@ -1,13 +1,3 @@
-using AutoMapper;
-using FlightControl.Api;
-using FlightControl.Api.Services;
-using FlightControl.Domain.Interfaces;
-using FlightControl.Infrastructure;
-using FlightControl.Infrastructure.Context;
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore;
-
 var builder = WebApplication.CreateBuilder(args); 
 {
     builder.Services.AddInfrastructure()
@@ -20,7 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
-
 
 }
 var app = builder.Build();
@@ -36,7 +25,6 @@ app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
 
 app.MapControllers();
 

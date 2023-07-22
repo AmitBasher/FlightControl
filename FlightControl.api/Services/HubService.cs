@@ -1,8 +1,4 @@
-﻿using FlightControl.Api.DTO;
-using Microsoft.AspNetCore.SignalR;
-using System.Text.Json;
-
-namespace FlightControl.Api.Services; 
+﻿namespace FlightControl.Api.Services; 
 public class HubService {
     private readonly IHubContext<MyHub> _hubContext;
     public HubService(IHubContext<MyHub> hubContext) { 

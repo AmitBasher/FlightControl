@@ -8,24 +8,24 @@
         public int NextArrivalStageId { get; set; }
         public bool IsTerminal { get; set; }
         public bool IsAvailable { get; set; }
-        //public StageModelService Service { get; }=new(this)
+        public Stage() {
+            Flights = Channel.CreateUnbounded<Flight>();
+        }
+
         [NotMapped]
         public Action<Flight>? OnFlightUpdate { get; set; }
         [NotMapped]
         public Action<NextStageEventArgs>? OnEndProcess { get; set; }
         [NotMapped]
         protected Channel<Flight> Flights { get; set; }
-        protected readonly SemaphoreSlim _semaphoreProcess = new(1);
+        protected readonly SemaphoreSlim _stageSemaphore = new(1);
 
-        public Stage() {
-            Flights = Channel.CreateUnbounded<Flight>();
-        }
-        public async Task AddFlight(Flight flight,SemaphoreSlim semaphore=null) {
+        public async Task AddFlight(Flight flight,SemaphoreSlim? externalSemaphore=null) {
             await Flights.Writer.WriteAsync(flight);
-            _=Task.Run(()=>ProcessFlight(semaphore));
+            _=Task.Run(()=>ProcessFlight(externalSemaphore));
         }
-        protected virtual async Task ProcessFlight(SemaphoreSlim semaphore) {
-            await _semaphoreProcess.WaitAsync();
+        protected virtual async Task ProcessFlight(SemaphoreSlim? externalSemaphore) {
+            await _stageSemaphore.WaitAsync();
 
             Flight flight= await Flights.Reader.ReadAsync();
             flight!.CurrentStage = Id;
@@ -36,8 +36,8 @@
             OnEndProcess!.Invoke(new NextStageEventArgs(stageId,flight));
 
             IsAvailable= true;
-            semaphore?.Release();
-            _semaphoreProcess.Release();
+            externalSemaphore?.Release();
+            _stageSemaphore.Release();
         }
     }
 }

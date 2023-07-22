@@ -1,14 +1,4 @@
-﻿using AutoMapper;
-using FlightControl.Api.DTO;
-using FlightControl.Api.DTO.IMapper;
-using FlightControl.Api.Models;
-using FlightControl.Api.Services;
-using FlightControl.Domain.Models;
-using FlightControl.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SignalR;
-using System.Diagnostics;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace FlightControl.Api.Controllers; 
 [Route("api/[controller]")]
@@ -37,10 +27,5 @@ public class FlightController : ControllerBase {
         var array2 = _mapper.Map<Stage[],StageDto[]>(StagesConfiguration.stagesConfig);
         await _myHub.SendStages(array2);
         return Ok();
-    }
-    [HttpGet("StagesHub")]
-    public ActionResult<List<Stage>> Stages() {
-        var list = StagesConfiguration.stagesConfig.ToList();
-        return Ok(list);
     }
 }

@@ -365,6 +365,7 @@ FodyWeavers.xsd
 #Basher-edit
 GeneralTesting/
 Dockerfile
+.dockerignore
 
 #Client
 FlightControl.Client/node_modules/

@@ -7,7 +7,7 @@ namespace FlightControl.Simulator {
         { BaseAddress= new Uri("https://localhost:7081") };
         static void Main(string[] args) {
             var timer = new System.Timers.Timer(2500);
-            timer.Elapsed+=(s, e) => CreateFlight();
+            timer.Elapsed+=(s, e) => _=CreateFlight();
             timer.Elapsed+=(s, e) => ChangeTimerInterval(s!);
             timer.Start();
             Console.WriteLine("Simulator Started");

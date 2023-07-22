@@ -1,15 +1,13 @@
-﻿using FlightControl.Api.Services;
-
-namespace FlightControl.Api;
+﻿namespace FlightControl.Api;
 public static class DependencyInjection {
     public static IServiceCollection AddTowerControlServices(this IServiceCollection services) {
-        return services.AddScoped<FlightControlService>()
+        return services.AddScoped<TowerControlDbService>()
                        .AddSingleton
                        (serviceprovider => {
                            var scope = serviceprovider.GetRequiredService<IServiceScopeFactory>().CreateScope();
-                           var FlightDBService = scope.ServiceProvider.GetRequiredService<FlightControlService>();
+                           var FlightDBService = scope.ServiceProvider.GetRequiredService<TowerControlDbService>();
                            var hub = scope.ServiceProvider.GetRequiredService<HubService>();
-                           return new TowerControlService(FlightDBService);//, hub FlightService,
+                           return new TowerControlService(FlightDBService);
                        });
     }
     public static IServiceCollection AddHubServices(this IServiceCollection services) {
@@ -24,7 +22,7 @@ public static class DependencyInjection {
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .WithOrigins("http://localhost:4200", "https://localhost:7137")
-                    );//
+                    );
         });
     }
 }
